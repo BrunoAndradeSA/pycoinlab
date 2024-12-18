@@ -62,6 +62,7 @@ CREATE DATABASE pycoinlab;
 FLASK_APP=run.py
 FLASK_ENV=development
 DATABASE_URL=postgresql://usuario:senha@localhost:5432/pycoinlab
+SECRET_KEY=sua-secret-key-para-autenticacao
 ```
 
 ### **5. Execute as Migrações**
