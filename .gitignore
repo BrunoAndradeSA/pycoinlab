@@ -1,0 +1,56 @@
+# Python bytecode
+*.py[cod]
+__pycache__/
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Editor-specific files
+.vscode/
+.idea/
+*.swp
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Alembic migration files (compiled Python files)
+migrations/versions/*.pyc
+migrations/__pycache__/
+
+# Environment variables
+.env
+.env.*
+
+# Flask specific
+instance/
+*.log
+
+# Cache files
+*.cache
+.cache/
+*.pyo
+
+# Compiled or temporary files
+*.so
+*.bak
+*.tmp
+*.temp
+*.pid
+*.seed
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+.tox/
+htmlcov/
+
+# Poetry-specific files
+poetry.lock
+
+# Database files
+*.sqlite3
+*.db
+*.sql
