@@ -20,13 +20,22 @@ class DoMiningService:
             last_proof = last_block.proof
             proof = blockchain.proof_of_work(last_proof=last_proof)
 
+            block = blockchain.new_block(
+                proof=proof
+            )
+
+            if not block:
+                return get_default_response(
+                    message="Failed to mine a new block!",
+                    code=-1,
+                    http_code=400
+                )
+
             blockchain.new_transaction(
                 sender="0",
                 recipient=miner_address,
-                amount=1
+                amount=blockchain.mining_reward
             )
-
-            block = blockchain.new_block(proof=proof)
 
             response = {
                 'message': "New block mined!",
